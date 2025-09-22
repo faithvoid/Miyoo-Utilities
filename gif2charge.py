@@ -2,7 +2,6 @@ from PIL import Image, ImageSequence
 import json
 import sys
 
-
 def extract_frames(gif_path, output_prefix="chargingState"):
     gif = Image.open(gif_path)
 
@@ -32,6 +31,6 @@ def extract_frames(gif_path, output_prefix="chargingState"):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("Usage: python extract_gif_frames.py input.gif")
+        print("Usage: python gif2charge.py input.gif")
     else:
         extract_frames(sys.argv[1])
